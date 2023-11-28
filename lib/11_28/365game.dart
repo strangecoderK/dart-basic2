@@ -38,7 +38,7 @@ void main() {
       maxClapPlayer=players[i];
     }
 
-  }print('₩n 가장 많은 clap을 출력한 플레이어: $maxClapPlayer');
+  }print('\n 가장 많은 clap을 출력한 플레이어: $maxClapPlayer');
 }
 
 
