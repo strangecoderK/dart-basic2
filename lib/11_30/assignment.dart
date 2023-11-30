@@ -26,3 +26,10 @@ class Cleric{
     return recoveryValue;
   }
 }
+
+void main(){
+  Cleric hearler=Cleric('Lux',5,1);
+
+  int result=hearler.pray(3);
+  print('회복량은 $result');
+}
