@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Cleric{
   String name;
   int hp=50;
@@ -10,5 +12,17 @@ class Cleric{
   void selfaid(){
     mp-=5;
     hp=mpMax;
+  }
+
+  int pray(int sec){
+    int recoveryValue;
+    var randomPoint = Random().nextInt(3);
+    recoveryValue = sec+randomPoint;
+    if(mp+recoveryValue<=mpMax){
+      recoveryValue=recoveryValue;
+    }else if(mp+recoveryValue>mpMax){
+      recoveryValue=mpMax-mp;}
+    mp=mp+=recoveryValue;
+    return recoveryValue;
   }
 }
