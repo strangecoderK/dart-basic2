@@ -22,7 +22,7 @@ class Cleric{
       recoveryValue=recoveryValue;
     }else if(mp+recoveryValue>mpMax){
       recoveryValue=mpMax-mp;}
-    mp=mp+=recoveryValue;
+    mp=mp+recoveryValue;
     return recoveryValue;
   }
 }
