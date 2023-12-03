@@ -38,4 +38,9 @@ void main() {
   Cleric.mpMax;
   int result = hearler.pray(3);
   print('회복량은 $result');
+
+  final cleric1 = Cleric('아서스', hp: 40, mp: 5);
+  final cleric2 = Cleric('아서스', hp: 40);
+  final cleric3 = Cleric('아서스');
+  final cleric4 = Cleric();
 }
