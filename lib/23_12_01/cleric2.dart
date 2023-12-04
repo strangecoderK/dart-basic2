@@ -4,13 +4,13 @@ class Cleric {
   static const hpMax = 50;
   static const mpMax = 10;
   String name;
-  int? hp = 50;
-  int? mp = 10;
+  int hp;
+  int mp;
 
-  Cleric(this.name, {this.hp, this.mp});
+  Cleric(this.name, {this.hp=hpMax, this.mp=mpMax});
 
-  void selfAid(int? mp) {
-    if (mp != null) {
+  void selfAid() {
+     {
       mp -= 5;
       hp = mpMax;
     }
@@ -21,21 +21,19 @@ class Cleric {
     var randomPoint = Random().nextInt(3);
     recoveryValue = sec + randomPoint;
 
-    if (mp! + recoveryValue <= mpMax) {
+    if (mp + recoveryValue <= mpMax) {
       recoveryValue = recoveryValue;
-    } else if (mp! + recoveryValue > mpMax) {
-      recoveryValue = mpMax - mp!;
+    } else if (mp + recoveryValue > mpMax) {
+      recoveryValue = mpMax - mp;
     }
 
-    mp = mp! + recoveryValue;
+    mp = mp + recoveryValue;
     return recoveryValue;
   }
 }
 
 void main() {
   Cleric hearler = Cleric('Lux', hp: 5, mp: 4);
-  Cleric.hpMax;
-  Cleric.mpMax;
   int result = hearler.pray(3);
   print('회복량은 $result');
 
