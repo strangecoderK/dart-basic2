@@ -30,9 +30,9 @@ class PoisonSlime extends Slime {
     hero.hp -= 10;
     if (number > 0) {
       number--;
-      hero.hp-=hero.hp~/5;
-      print('${hero.hp~/5}의 데미지!');
+      hero.hp -= hero.hp ~/ 5;
       print('추가로, 독 포자를 살포했다!');
+      print('${hero.hp ~/ 5}의 데미지!');
     }
   }
 }
@@ -42,5 +42,4 @@ void main() {
   Hero hero = Hero('토르', 100);
 
   poisonSlime.attack(hero);
-
 }
