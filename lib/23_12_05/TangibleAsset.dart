@@ -3,8 +3,7 @@
 //다 : Patent
 import 'package:untitled/23_12_05/asset.dart';
 
-abstract class TangibleAsset extends Asset{
-
+abstract class TangibleAsset extends Asset {
   String color;
 
   TangibleAsset({
