@@ -7,3 +7,8 @@ abstract class Asset {
     required this.price,
   });
 }
+
+abstract interface class Thing {
+  double get weight; //getter
+  set weight(double value); //setter
+}

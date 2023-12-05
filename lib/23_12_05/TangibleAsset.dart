@@ -10,5 +10,17 @@ abstract class TangibleAsset extends Asset {
     required super.name,
     required super.price,
     required this.color,
+
   });
+
+  @override
+  double get weight {
+    return weight;
+  }
+
+  ;
+
+  set weight(double value);
+
+
 }
