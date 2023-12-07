@@ -1,4 +1,1 @@
-abstract interface class Mechanic {
-
-
-}
+abstract interface class Mechanic {}

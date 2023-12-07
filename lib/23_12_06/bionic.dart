@@ -1,3 +1,1 @@
-abstract interface class Bionic {
-
-}
+abstract interface class Bionic {}

@@ -1,6 +1,7 @@
-import 'package:untitled/23_12_06/bionic.dart';
 
-abstract class Zerg implements Bionic{
 
+abstract class Zerg extends Tribe implements Bionic {
+
+  void recovery() {}
 
 }

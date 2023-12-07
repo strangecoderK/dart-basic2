@@ -1,3 +1,1 @@
-abstract class Terran {
-
-}
+abstract class Terran extends Tribe {}
