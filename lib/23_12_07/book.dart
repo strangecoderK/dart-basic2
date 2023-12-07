@@ -24,6 +24,18 @@ class Book {
 
   @override
   int get hashCode => title.hashCode ^ publishDate.hashCode;
+
+  Book copyWith({
+    String? title,
+    DateTime? publishDate,
+    String? comment,
+  }) {
+    return Book(
+      title: title ?? this.title,
+      publishDate: publishDate ?? this.publishDate,
+      comment: comment ?? this.comment,
+    );
+  }
 }
 
 void main() {
