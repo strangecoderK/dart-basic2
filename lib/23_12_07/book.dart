@@ -28,10 +28,23 @@ class Book {
 
 void main() {
   final books = <Book>{};
+  final bookList = <Book>[];
   Book book1 = Book(
-      title: 'twilight', publishDate: DateTime(2023, 12, 07), comment: 'good');
+    title: 'twilight',
+    publishDate: DateTime(2023, 12, 07),
+    comment: 'good',
+  );
   Book book2 = Book(
-      title: 'twilight', publishDate: DateTime(2023, 12, 07), comment: 'good');
+    title: 'twilight',
+    publishDate: DateTime(2023, 12, 07),
+    comment: 'bad',
+  );
+  Book book3 = Book(
+    title: 'twilight',
+    publishDate: DateTime(2023, 11, 08),
+    comment: 'good',
+  );
+
   print(book1);
   print(book2);
   print(book1 == book2);
@@ -41,4 +54,10 @@ void main() {
 
   books.add(book2);
   print(books.length);
+
+  bookList.add(book1);
+  bookList.add(book3);
+  print(bookList);
+  bookList.sort((a, b) => a.publishDate.compareTo(b.publishDate));
+  print(bookList);
 }
