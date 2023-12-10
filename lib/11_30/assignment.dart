@@ -1,35 +1,35 @@
 import 'dart:math';
 
-class Cleric{
+class Cleric {
   String name;
-  int hp=50;
-  final int hpMax=50;
-  int mp=10;
-  final int mpMax=10;
+  int hp = 50;
+  int mp = 10;
+  final int hpMax = 50;
+  int mpMax = 10;
 
   Cleric(this.name, this.hp, this.mp);
 
-  void selfaid(){
-    mp-=5;
-    hp=mpMax;
+  void selfAid() {
+    if (mp >= 5) {
+      mp -= 5;
+      hp = hpMax;
+      print('hp가 가득 찼습니다.');
+    }
   }
 
-  int pray(int sec){
-    int recoveryValue;
-    var randomPoint = Random().nextInt(3);
-    recoveryValue = sec+randomPoint;
-    if(mp+recoveryValue<=mpMax){
-      recoveryValue=recoveryValue;
-    }else if(mp+recoveryValue>mpMax){
-      recoveryValue=mpMax-mp;}
-    mp=mp+recoveryValue;
-    return recoveryValue;
+  int pray(int sec) {
+    int randomPoint = Random().nextInt(3);
+    int recoveryMp = sec + randomPoint;
+    if (mp + recoveryMp >= 10) {
+      recoveryMp = mpMax - mp;
+    }
+    print('회복량은 $recoveryMp입니다.');
+    return recoveryMp;
   }
 }
 
-void main(){
-  Cleric hearler=Cleric('Lux',5,1);
-
-  int result=hearler.pray(3);
-  print('회복량은 $result');
+void main() {
+  Cleric cleric = Cleric('럭스', 24, 5);
+  cleric.selfAid();
+  cleric.pray(3);
 }
