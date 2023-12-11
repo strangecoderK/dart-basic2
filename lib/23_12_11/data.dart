@@ -6,7 +6,10 @@ class Employee {
 
   Employee(this.name, this.age);
 
-  Map<String, dynamic> toJson() => {"name": name, "age": age};
+  Map<String, dynamic> toJson() => {
+        "name": name,
+        "age": age,
+      };
 }
 
 class Department {
