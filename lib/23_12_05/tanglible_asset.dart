@@ -1,7 +1,7 @@
 //가 : asset
 //나 : IntangibleAsset
 //다 : Patent
-import 'package:untitled/23_12_05/asset_Thing.dart';
+import 'package:untitled/23_12_05/asset_thing.dart';
 
 abstract class TangibleAsset extends Asset implements Thing {
   String color;

@@ -1,12 +1,13 @@
-import 'slime.dart';
+import 'sword.dart';
 
 class Hero {
   String name;
   int hp;
+  Sword? sword;
 
-  Hero(this.name, this.hp);
-
-  void attack() {}
+  void attack() {
+    print('공격했습니다.');
+  }
 
   void run() {}
 
@@ -18,17 +19,22 @@ class Hero {
   void sit() {}
 
   void slip() {}
+
+  Hero({
+    required this.name,
+    required this.hp,
+    this.sword,
+  });
 }
 
-void main(){
-  Hero hero = Hero('준석', 100);
-  Slime slime1 = Slime(40,'A');
-  Slime slime2 = Slime(48,'B');
+void main() {
+  final sword = Sword(name: '불꽃의 검', damage: 5);
 
-  hero.attack();
-  slime1.run();
-  slime2.run();
-  hero.run();
-  hero.sleep();
+  final hero = Hero(
+    name: '슈퍼맨',
+    hp: 100,
+  );
 
+  hero.sword = sword;
+  print(hero.sword);
 }

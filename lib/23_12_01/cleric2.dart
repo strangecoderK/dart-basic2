@@ -40,5 +40,5 @@ void main() {
   final cleric1 = Cleric('아서스', hp: 40, mp: 5);
   final cleric2 = Cleric('아서스', hp: 40);
   final cleric3 = Cleric('아서스');
-  final cleric4 = Cleric();
+  //final cleric4 = Cleric();
 }
