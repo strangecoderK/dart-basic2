@@ -1,15 +1,5 @@
 import 'dart:io';
 
-/*void main(){
-  final myFile = File('save.txt');
-
-  myFile.writeAsStringSync('Hello, World.');
-  var text = myFile.readAsStringSync();
-
-
-
-}*/
-
 void copy(String source, String target) {
   File file = File(source);
   File copyFile = File(target);
