@@ -63,11 +63,12 @@ void main() {
       .toList());
 
 // 5. 밀라노에 거래자가 있는가?
-  transactions
+  print(transactions.any((e) => e.trader.city == "Milan"));
+  /*transactions
       .where((e) => e.trader.city == "Milan")
       .map((e) => e.trader.name)
       .toSet()
-      .forEach(print);
+      .forEach(print);*/
 
 // 6. 케임브리지에 거주하는 거래자의 모든 트랙잭션값을 출력하시오.
   transactions.forEach(print);
