@@ -1,12 +1,6 @@
 import 'dart:convert';
 
-class MovieInfo {
-  String title;
-  String director;
-  int year;
 
-  MovieInfo(this.title, this.director, this.year);
-}
 
 Future<String> getMovieInfo() async {
   await Future.delayed(Duration(seconds: 2));
@@ -17,7 +11,6 @@ Future<String> getMovieInfo() async {
   };
   return jsonEncode(mockData);
 }
-Future <void> main()async{
-
-
+void main() async {
+  print(jsonDecode(await getMovieInfo())['director']);
 }
