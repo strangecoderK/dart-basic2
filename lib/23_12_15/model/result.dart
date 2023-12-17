@@ -28,7 +28,7 @@ class Result {
 
   Map<String, dynamic> toJson() => _$ResultToJson(this);
 
-  // @override
-  // String toString() {
-  //   return 'Result{adult:$adult, originalLange:$originalLanguage, title:$title, popularity:$popularity, releaseDate:$releaseDate, originalTitle:$originalTitle, video:$video}';
+  // @override 빌드 리빌드 하고 만들어야 오류가 안생긴다..?
+  String toString() {
+    return 'Result{adult:$adult, originalLange:$originalLanguage, title:$title, popularity:$popularity, releaseDate:$releaseDate, originalTitle:$originalTitle, video:$video}';
   }
