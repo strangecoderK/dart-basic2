@@ -9,7 +9,7 @@ void main() async {
   final dto = await api.getDtoMovie();
 
   List<Result> results = dto.results
-      ?.where((e) => e.remainStat != null)    // 거를 거 거르고?
+      ?.where((e) => e != null)    // 거를 거 거르고?
       .map((e) => e.toResult())    // 모델 클래스로 변환
       .toList() ?? [];
 

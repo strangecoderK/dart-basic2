@@ -32,3 +32,4 @@ class Result {
   String toString() {
     return 'Result{adult:$adult, originalLange:$originalLanguage, title:$title, popularity:$popularity, releaseDate:$releaseDate, originalTitle:$originalTitle, video:$video}';
   }
+}
