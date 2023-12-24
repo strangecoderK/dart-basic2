@@ -4,10 +4,10 @@ class Cleric {
   String name;
   int hp = 50;
   int mp = 10;
-  final int hpMax = 50;
-  final int mpMax = 10;
+  static const int hpMax = 50;
+  static const int mpMax = 10;
 
-  Cleric(this.name, this.hp, this.mp);
+  Cleric(this.name, {this.hp=hpMax, this.mp=mpMax});//optional parameter의 디폴트는 컴파일 타임에 초기화된 상수여야한다.
 
   void selfAid() {
     if (mp >= 5) {
@@ -29,7 +29,11 @@ class Cleric {
 }
 
 void main() {
-  Cleric cleric = Cleric('럭스', 24, 8);
+  Cleric cleric = Cleric('럭스', hp :24, mp:8);
   cleric.selfAid();
   cleric.pray(3);
+
+  final cleric1 = Cleric('아서스', hp: 40, mp: 5);
+  final cleric2 = Cleric('아서스', hp: 40);
+  final cleric3 = Cleric('아서스');
 }

@@ -9,3 +9,4 @@ class Slime{
     print('$suffix 슬라임이 도망갔습니다');
   }
 }
+

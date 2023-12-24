@@ -7,7 +7,7 @@ class Hero {
 
   Hero({
     required this.name,
-    required this.hp,
+    this.hp=100,
     this.sword,
   });
 
