@@ -5,7 +5,7 @@ class Cleric {
   int hp = 50;
   int mp = 10;
   final int hpMax = 50;
-  int mpMax = 10;
+  final int mpMax = 10;
 
   Cleric(this.name, this.hp, this.mp);
 
@@ -13,7 +13,7 @@ class Cleric {
     if (mp >= 5) {
       mp -= 5;
       hp = hpMax;
-      print('hp가 가득 찼습니다.');
+      print('hp가 가득 찼습니다. 현재 mp는 $mp입니다.');
     }
   }
 
@@ -29,7 +29,7 @@ class Cleric {
 }
 
 void main() {
-  Cleric cleric = Cleric('럭스', 24, 5);
+  Cleric cleric = Cleric('럭스', 24, 8);
   cleric.selfAid();
   cleric.pray(3);
 }

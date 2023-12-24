@@ -6,6 +6,6 @@ class Slime{
   Slime(this.hp, this.suffix);
 
   void run(){
-    print('$suffix 슬라임이 도망갔다');
+    print('$suffix 슬라임이 도망갔습니다');
   }
 }
